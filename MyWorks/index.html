@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <script src="jquery/jquery-2.2.3.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/body.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/video.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+</head>
+<body>
+
+<header class="container-fluid con">
+    <div class="header"></div>
+</header>
+
+<div id="main-navigetion">
+    <div class="inner affix-top" data-spy="affix" data-offset-top="20">
+        <nav id="navcontent" class="navbar navbar-inverse "  >
+            <div class="container-fluid " id="navcenter">
+                <div class="logo_img navbar-header">
+                    <a class="navbar-brand"><img src="img/logo2.png" alt="logo" /></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="drop" id="drop--1">
+                        <a id="finxv" >FF-XV</a>
+                        <ul id="drop-1" class="drop-content">
+                            <li >one</li>
+                            <li >one</li>
+                        </ul>
+                    </li>
+                    <li class="drop" id="drop--2">
+                        <a id="unc4" >Uncharted4</a>
+                        <ul id="drop-2" class="drop-content">
+                            <li>one</li>
+                            <li>one</li>
+                        </ul>
+                    </li>
+                    <li class="drop " id="drop--3">
+                        <a id="other">other</a>
+                        <ul  id="drop-3" class="drop-content">
+                            <li>one</li>
+                            <li>one</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#finxv").click(function(){
+            $("html,body").animate({scrollTop:$("#home_second").offset().top},1000)
+        });
+        $("#unc4").click(function(){
+            $("html,body").animate({scrollTop:$("#home_third").offset().top},1000)
+        });
+        $("#other").click(function(){
+            $("html,body").animate({scrollTop:$("#home_first").offset().top},1000)
+        });
+
+
+
+        $("#drop--1").mouseenter(function(){
+            $("#drop-1").fadeIn(300);
+        })
+        $("#drop--1").mouseleave(function(){
+            $(" #drop-1").fadeOut(300)
+        })
+        $("#drop--2").mouseenter(function(){
+            $("#drop-2").fadeIn(300);
+        })
+        $("#drop--2").mouseleave(function(){
+            $(" #drop-2").fadeOut(300)
+        })
+        $("#drop--3").mouseenter(function(){
+            $("#drop-3").fadeIn(300);
+        })
+        $("#drop--3").mouseleave(function(){
+            $(" #drop-3").fadeOut(300)
+        })
+
+
+
+
+
+    })
+</script>
+
+
+
+<!--<div id="home_first" class=" container-fluid con" >
+    <div class="game_video">
+        <video class="fullscreen-bg" loop="true" muted="muted" autoplay="autoplay">
+            <source src="video/ffxv1.webm" type="video/webm"/>
+        </video>
+    </div>
+
+    <div class="pop_video">
+        <img src="#" class="ffxv_video img-thumbnail" alt="ffxv" />
+    </div>
+
+
+    <div id="ffxvVideo" class="col-sm-12">
+        <div class="ffxv_watch col-sm-9">
+            <button id="closeVideo">X</button>
+
+            <video class="unchartedVideo" controls>
+
+                <source src="video/uncharted4.mp4"/>
+            </video>
+        </div>
+    </div>
+</div>-->
+
+<div id="home_first" class=" container-fluid con" >
+    <div class="game_video">
+        <video class="fullscreen-bg" loop="loop" muted="muted" autoplay="autoplay">
+            <source src="video/uncharted4.mp4" type="video/mp4"/>
+        </video>
+    </div>
+
+    <div class="pop_video">
+        <img src="img/unchartedvideo.jpg" class="ffxv_video img-thumbnail" alt="ffxv" id="myBtn"/>
+    </div>
+
+
+    <div class="modal fade " id="myModal" role="dialog">
+        <div class="modal-dialog " style="width: 75%">
+            <div class="modal-content ">
+                <div class="modal-header modalBackground">
+                    <button type="button" id="closeVideo" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body modalBackground">
+                    <video class="unchartedVideo" controls >
+
+                        <source src="video/uncharted4.mp4"/>
+                    </video>
+                </div>
+
+                <div class="modal-footer modalBackground"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+/*    $(document).ready(function(){
+        $(".ffxv_video").mouseenter(function(){
+            $(this).css({"opacity":"1"});
+        });
+        $(".ffxv_video").mouseleave(function(){
+            $(this).css({"opacity":"0.1"});
+        });
+        $(".ffxv_video").click(function(){
+            $(".ffxv_watch").css({"display":"block"});
+            $("#ffxvVideo").css({"background":"rgba(0,0,0,0.5)"});
+        });
+        $("#closeVideo").click(function(){
+            $(".ffxv_watch").css({"display":"none"});
+            $("#ffxvVideo").css({"background":"transparent"});
+        });
+
+
+    })*/
+
+$(document).ready(function(){
+    $(".ffxv_video").mouseenter(function(){
+        $(this).css({"opacity":"1"});
+    });
+    $(".ffxv_video").mouseleave(function(){
+        $(this).css({"opacity":"0.3"});
+    });
+
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+
+});
+
+</script>
+
+
+
+<div id="home_second" class="container-fluid con">
+    <h1 class="col-sm-12">FINAL FANTASY.XV</h1>
+    <div class="ffxvContainer" id="ffxvcon">
+        <div class="col-sm-3">
+            <a href="#"><img  id="img1" class="one"  src="img/home-promo-01.jpg"/></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img id="img2"  class="one" src="img/home-promo-02.jpg"/></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img id="img3"  class="one" src="img/home-promo-03.jpg"/></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img id="img4"  class="one" src="img/home-promo-04.jpg"/></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("documenat").ready(function(){
+
+        $("img[id^='img']").mouseenter(function(){
+            $(this).animate({
+                width:"103%",
+
+            });
+            $(this).css({"opacity":"1"});
+
+
+        });
+        $("img[id^='img']").mouseleave(function(){
+            $(this).animate({
+                width:"100%"
+            });
+            $(this).css({"opacity":"0.5"})
+        });
+
+
+
+    })
+
+</script>
+
+
+<div id="home_third" class="container-fluid con" >
+    <h1 class="col-sm-12">UNCHARTED4</h1>
+    <div class="unchartedContainer">
+        <div class="uctimg" id="ucimg1">
+            <img src="img/U4_E3_gameplay_5sec_268x648_21111.gif" class="two" />
+        </div>
+        <div class="uctimg" id="ucimg2">
+            <img src="img/Uncharted-4_drake-sully-hill_th.jpg" class="two" />
+        </div>
+        <div class="uctimg" id="ucimg3">
+            <img src="img/uncharted_twitter_bg_03.jpg" class="two" />
+        </div>
+        <div class="uctimg" id="ucimg4">
+            <img src="img/social-blog-post-bg.jpg" class="two" />
+        </div>
+
+        <div class="uctimg" id="ucimg5">
+            <img src="img/U4_5sec_357x297_2.gif" class="two" />
+        </div>
+
+
+    </div>
+</div>
+
+<footer class="container-fluid con">
+    <div></div>
+</footer>
+
+
+
+</body>
+</html>

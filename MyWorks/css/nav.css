@@ -1,0 +1,89 @@
+
+#navcontent{
+
+    top:0;
+    background:rgba(0,0,0,0.2);
+    height: 80px;
+    z-index: 500;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav .logo_img{
+    width: 40%;
+
+    margin: 0 auto;
+
+}
+nav .logo_img a img{
+    width: 100%;
+}
+
+
+#navcenter{
+    width: 70%;
+
+}
+#main-navigetion ul{
+    width: 60%;
+}
+
+#main-navigetion ul li{
+
+
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+#main-navigetion ul li:hover{
+    cursor:pointer;
+}
+
+.drop {
+    width: 120px;
+    margin-top: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.drop ul{
+    margin-top: 15px;
+    padding: 0;
+
+
+
+}
+
+
+.drop ul li{
+    padding-top:10px;
+    padding-bottom: 10px;
+    list-style-type: none;
+
+
+    background:rgba(0,0,0,0.5);
+}
+
+
+
+.drop-content {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+    margin-top: 0;
+    display: none;
+    min-width: 120px;
+
+
+}
+
+.drop:hover .drop-content{
+
+}
+
+.drop .drop-content li:hover{
+    background:rgba(0,0,0,0.8);
+}
