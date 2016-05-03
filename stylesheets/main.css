@@ -107,7 +107,7 @@ a{
 
 #home_content,#about_content,#skill_content,#demo_content{
     margin: 0 auto;
-    width: 1000px;
+    width: 70%;
     height: auto;
 
 }
